@@ -1,0 +1,433 @@
+<Window x:Class="CV.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        MinHeight="609.879" MinWidth="859.132" MaxWidth="859.132" WindowStartupLocation="CenterScreen" WindowStyle="None"
+        MaxHeight="609.879" BorderThickness="0" AllowsTransparency="false">
+    <FrameworkElement.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Templates.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </FrameworkElement.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Name="col0" Width="*"/>
+            <ColumnDefinition x:Name="col1" Width="4*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Name="gridMenu" Column="0">
+            <Border Name="menuBorder" BorderBrush="DarkCyan" BorderThickness="3, 4, 1, 4" CornerRadius="5">
+                <StackPanel>
+                    <Button Click="profbtn_Click" Name="profbtn" Height="65" FontWeight="Bold" FontSize="15" Cursor="Hand" Focusable="True"
+                  Style="{DynamicResource ButtonFocusVisual}" Width="Auto" Margin="0,10">
+                        <TextBlock Text="M Shoaib" VerticalAlignment="Top" HorizontalAlignment="Center" FontWeight="Bold"/>
+                    </Button>
+                    <Button Click="skillbtn_Click" Name="skillbtn" Height="65" FontWeight="Bold" FontSize="15" Cursor="Hand"
+                  Style="{DynamicResource ButtonFocusVisual}" Width="Auto" Margin="0,10">
+                        <TextBlock Text="Skills/Technology" VerticalAlignment="Top" HorizontalAlignment="Center" FontWeight="Bold"/>
+                    </Button>
+                    <Button Click="Projbn_Click" Name="Projbn" Height="65" FontWeight="Bold" FontSize="15" Cursor="Hand"
+                  Style="{DynamicResource ButtonFocusVisual}" Width="Auto" Margin="0,10">
+                        <TextBlock Text="Projects" VerticalAlignment="Top" HorizontalAlignment="Center" FontWeight="Bold"/>
+                    </Button>
+                    <Button Click="expbtn_Click" Name="expbtn" Height="65" FontWeight="Bold" FontSize="15" Cursor="Hand"
+                  Style="{DynamicResource ButtonFocusVisual}" Width="Auto" Margin="0,10">
+                        <TextBlock Text="Experience" VerticalAlignment="Top" HorizontalAlignment="Center" FontWeight="Bold"/>
+                    </Button>
+                    <Button Click="edubn_Click" Name="edubn" Height="65" FontWeight="Bold" FontSize="15" Cursor="Hand"
+                  Style="{DynamicResource ButtonFocusVisual}" Width="Auto" Margin="0,10">
+                        <TextBlock Text="Education" VerticalAlignment="Top" HorizontalAlignment="Center" FontWeight="Bold"/>
+                    </Button>
+                    <Button Click="hobbbtn_Click" Name="hobbbtn" Height="65" FontWeight="Bold" FontSize="15" Cursor="Hand"
+                  Style="{DynamicResource ButtonFocusVisual}" Width="Auto" Margin="0,10">
+                        <TextBlock Text="Hobbies" VerticalAlignment="Top" HorizontalAlignment="Center" FontWeight="Bold"/>
+                    </Button>
+                    <Button Click="langbtn_Click" Name="langbtn" Height="65" FontWeight="Bold" FontSize="15" Cursor="Hand"
+                  Style="{DynamicResource ButtonFocusVisual}" Width="Auto" Margin="0,10">
+                        <TextBlock Text="Language" VerticalAlignment="Top" HorizontalAlignment="Center" FontWeight="Bold"/>
+                    </Button>
+                </StackPanel>
+            </Border>
+        </Grid>
+        <Grid Name="gridData" Column="1">
+            <Border Name="contentBorder" BorderBrush="DarkCyan" BorderThickness="1,4,3,2" CornerRadius="5">
+                <TabControl SelectionChanged="tab_SelectionChanged" Name="tab" Height="Auto" Width="Auto">
+                    <TabItem Name="tabMain" Visibility="Collapsed">
+                        <Grid Name="gridMain" Background="#FFE5E5E5">
+                            <Label Content="Curriculum Vitae" FontWeight="Bold" FontSize="58" HorizontalAlignment="Center"
+                     VerticalAlignment="Center" Margin="3,1,2,185"/>
+                            <Label Content="It is a simple Application, Build with C#, WPF to Show my CV" FontSize="22"
+                     HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="3,1,2,185"/>
+                            <Label Content="+92 345 7788776 (m__m.shoaib@outlook.com)" FontWeight="Bold" FontSize="18" HorizontalAlignment="Center"
+                     VerticalAlignment="Bottom" Margin="3,1,2,155"/>
+                        </Grid>
+                    </TabItem>
+                    <TabItem Name="tabprofile" Visibility="Collapsed">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1.5*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <DockPanel Grid.Column="0">
+                                <Grid DockPanel.Dock="Top">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2.2*"/>
+                                        <ColumnDefinition Width="5*"/>
+                                        
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height=".5*"/>
+                                        <RowDefinition Height=".5*"/>
+                                        <RowDefinition Height=".5*"/>
+                                        <RowDefinition Height=".5*"/>
+                                        <RowDefinition Height=".5*"/>
+                                        <RowDefinition Height=".5*"/>
+                                        <RowDefinition Height=".5*"/>
+                                        <RowDefinition Height=".5*"/>
+                                        <RowDefinition Height=".5*"/>
+
+
+
+
+                                    </Grid.RowDefinitions>
+
+                                    <Label Grid.ColumnSpan="2" Grid.Row="0" Margin="3" FontWeight="Bold">+92 345 7788776 (m__m.shoaib@outlook.com)</Label>
+
+                                    <Label Grid.Column="0" Grid.Row="1" Margin="3" FontWeight="Bold">NAME:</Label>
+                                    <Label Grid.Column="0" Grid.Row="2" Margin="3" FontWeight="Bold">FATHER NAME:</Label>
+                                    <Label Grid.Column="0" Grid.Row="3" Margin="3" FontWeight="Bold">DATE OF BIRTH:</Label>
+                                    <Label Grid.Column="0" Grid.Row="4" Margin="3" FontWeight="Bold">C.N.I.C NO:</Label>
+                                    <Label Grid.Column="0" Grid.Row="5" Margin="3" FontWeight="Bold">DOMISILE:</Label>
+                                    <Label Grid.Column="0" Grid.Row="6" Margin="3" FontWeight="Bold">RELIGION:</Label>
+                                    <Label Grid.Column="0" Grid.Row="7" Margin="3" FontWeight="Bold">MARITAL STATUS:</Label>
+                                    <Label Grid.Column="0" Grid.Row="8" Margin="3" FontWeight="Bold">ADDRESS:</Label>
+
+
+
+
+
+
+                                    <Label Name="NAME" Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="1" Margin="3"/>
+                                    <Label Name="FNAME" Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="2" Margin="3"/>
+                                    <Label Name="DB" Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="3" Margin="3"/>
+                                    <Label Name="CNIC" Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="4" Margin="3"/>
+                                    <Label Name="Dom" Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="5" Margin="3"/>
+                                    <Label Name="Rel" Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="6" Margin="3"/>
+                                    <Label Name="Mstatus" Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="7" Margin="3"/>
+                                    <Label Name="Addr" Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="8" Margin="3"/>
+
+
+
+
+                                </Grid>
+                            </DockPanel>
+                            <Image Name="AboutBoxImg" Grid.Column="1" Source="/images/shoaib3.jpg"/>
+
+                        </Grid>
+                    </TabItem>
+                    <TabItem Name="tabskill" Visibility="Collapsed">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <DockPanel Grid.Column="0" Grid.Row="0">
+                                <Grid DockPanel.Dock="Top">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height=".5*"/>
+                                        <RowDefinition Height=".5*"/>
+                                        <RowDefinition Height=".5*"/>
+                                        <RowDefinition Height=".5*"/>
+                                        <RowDefinition Height=".5*"/>
+                                        <RowDefinition Height=".5*"/>
+                                        
+
+
+
+
+                                    </Grid.RowDefinitions>
+                                    <Label Grid.ColumnSpan="2" Grid.Row="0"  FontWeight="Bold" FontSize="25" HorizontalAlignment="Center">Skills/Proficiency</Label>
+                                    <Label Grid.Column="0" Grid.Row="1" Margin="3" >Programming (C, C++, C#, Java)</Label>
+                                    <Label Grid.Column="0" Grid.Row="2" Margin="3" >Android Apps Development (XAML, Java)</Label>
+                                    <Label Grid.Column="0" Grid.Row="3" Margin="3" >Data Base Management System</Label>
+                                    <Label Grid.Column="0" Grid.Row="4" Margin="3" >Internet Browsing and Installations</Label>
+                                    <Label Grid.Column="0" Grid.Row="5" Margin="3" >Web and Print Content Development</Label>
+                                   
+
+
+                                    <Label Grid.Column="1" Grid.Row="1" Margin="3" >Windows Apps Development (XAML,WPF)</Label>
+                                    <Label Grid.Column="1" Grid.Row="2" Margin="3" >Web  (XML, ASP.NET, JavaScript, PHP)</Label>
+                                    <Label Grid.Column="1" Grid.Row="3" Margin="3" >Public and Media Relations</Label>
+                                    <Label Grid.Column="1" Grid.Row="4" Margin="3" >Creative Team Leadership</Label>
+                                    <Label Grid.Column="1" Grid.Row="5" Margin="3" >New Product Launch</Label>
+                                    
+
+
+
+
+
+
+
+
+
+
+
+                                </Grid>
+                            </DockPanel>
+                            
+                            <DockPanel Grid.Column="0" Grid.Row="1">
+                                <Grid DockPanel.Dock="Top">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height=".5*"/>
+                                        <RowDefinition Height=".5*"/>
+                                        <RowDefinition Height=".5*"/>
+                                        <RowDefinition Height=".5*"/>
+                                        <RowDefinition Height=".5*"/>
+                                        <RowDefinition Height=".5*"/>
+
+
+
+
+
+                                    </Grid.RowDefinitions>
+                                    <Label Grid.ColumnSpan="2" Grid.Row="0" Margin="3" FontWeight="Bold" FontSize="25" HorizontalAlignment="Center">--------------------------------</Label>
+
+                                    <Label Grid.ColumnSpan="2" Grid.Row="1" Margin="3" FontWeight="Bold" FontSize="25" HorizontalAlignment="Center">Application Softwares</Label>
+                                    <Label Grid.Column="0" Grid.Row="2" Margin="3" >Code Project, Visual Studio 2013, WEKA, MS Project, SQL Server 2008, Crystal Reports, Adobe Products, Peach Tree </Label>
+                                    <Label Grid.Column="0" Grid.Row="3" Margin="3" >MS Office (Word, Access, Excel, PowerPoint) </Label>
+
+                                    <Label Grid.ColumnSpan="2" Grid.Row="4" Margin="3" FontWeight="Bold" FontSize="25" HorizontalAlignment="Center">--------------------------------</Label>
+
+                                    <Label Grid.Column="0" Grid.Row="5" Margin="3" FontWeight="Bold" FontSize="25" HorizontalAlignment="Center" >Web/Multimedia</Label>
+                                    <Label Grid.Column="0" Grid.Row="6" Margin="3" >Web Server Administration, Search Optimization, Flash, Dreamweaver, Fireworks, U Lead Video Studio, Swish Max.</Label>
+
+
+
+                                
+
+
+
+
+
+
+
+
+
+
+                                </Grid>
+                            </DockPanel>
+
+                        </Grid>
+
+                    </TabItem>
+                    <TabItem Name="tabproject" Visibility="Collapsed">
+                        <Grid >
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height=".5*"/>
+                                <RowDefinition Height="3*"/>
+                                <RowDefinition Height="1.5*"/>
+                            </Grid.RowDefinitions>
+                            <Label Content="Projects" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="20" Grid.Column="0" Grid.Row="0"></Label>
+
+                            <DockPanel Grid.Column="0" Grid.Row="1">
+                                <Border BorderBrush="Black" BorderThickness="5">
+
+                                    <Grid DockPanel.Dock="Top" Background="AliceBlue">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="4*"/>
+                                        <ColumnDefinition Width="5*"/>
+
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+
+
+
+
+
+
+
+
+
+
+
+                                        </Grid.RowDefinitions>
+
+                                        <Label Grid.Column="0" Grid.Row="1" Margin="3" FontWeight="Bold">Online Shoe Sell Website</Label>
+                                    <Label Grid.Column="0" Grid.Row="2" Margin="3" FontWeight="Bold"></Label>
+
+                                    <Label Grid.Column="0" Grid.Row="3" Margin="3" FontWeight="Bold">Products Sell Windows App</Label>
+                                    <Label Grid.Column="0" Grid.Row="4" Margin="3" FontWeight="Bold"></Label>
+
+                                    <Label Grid.Column="0" Grid.Row="5" Margin="3" FontWeight="Bold">Authorship Identification of Source Code</Label>
+                                        <Label Grid.Column="0" Grid.Row="6" Margin="3" FontWeight="Bold"></Label>
+
+                                        <Label Grid.Column="0" Grid.Row="7" Margin="3" FontWeight="Bold">Echo Media Player</Label>
+
+
+
+
+
+
+
+                                        <Label Name="shoesell" Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="1" Margin="3"/>
+                                    <Label Name="shoesell2" Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="2" Margin="3"/>
+                                    <Label Name="ProdS" Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="3" Margin="3"/>
+                                    <Label Name="ProdS2" Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="4" Margin="3"/>
+                                    <Label Name="Iden" Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="5" Margin="3"/>
+                                    <Label Name="Iden2" Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="6" Margin="3"/>
+                                        <Label Name="Echo" Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="7" Margin="3"/>
+                                        <Label Name="Echo2" Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="8" Margin="3"/>
+
+
+
+
+
+                                    </Grid>
+            </Border>
+
+            </DockPanel>
+                        </Grid>
+                    </TabItem>
+                    <TabItem Name="tabExper" Visibility="Collapsed">
+                        <Grid Background="#FFE5E5E5">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="40"></RowDefinition>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition Height="30"></RowDefinition>
+
+
+
+
+                            </Grid.RowDefinitions>
+
+                            <Label Content="Experience" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20"  Grid.Row="0"></Label>
+                            <Label Content="8-10-2015 to 31-5-2016  " FontWeight="Bold" FontSize="12" Grid.Row="1" ></Label>
+                            <Label Content="At Government Boys Degree College Sillanwali District Sargodha " FontWeight="Bold" FontSize="12" Grid.Row="2" ></Label>
+                            <Label Content="(As Computer Science Lecturer)"  FontSize="12" Grid.Row="3" ></Label>
+                            <Label Content="----------------------------------------------------------------------------"  FontSize="12" HorizontalAlignment="Center" FontWeight="Bold" Grid.Row="4" ></Label>
+
+
+
+                        </Grid>
+                    </TabItem>
+                    <TabItem Name="tabEdu" Visibility="Collapsed">
+                        <Grid Background="#FFE5E5E5">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="40"></RowDefinition>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition Height="20"></RowDefinition>
+
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition Height="20"></RowDefinition>
+
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition Height="20"></RowDefinition>
+
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition Height="20"></RowDefinition>
+
+
+
+
+                            </Grid.RowDefinitions>
+
+                            <Label Content="Education" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20"  Grid.Row="0"></Label>
+                            <Label Content="B-Ed, 2016 " FontWeight="Bold" FontSize="16" Grid.Row="1" ></Label>
+                            <Label Content="VIRTUAL UNIVERSITY PAKISTAN"  FontSize="12" Grid.Row="2" ></Label>
+                            <Label Content="(Continued..)"  FontSize="12" Grid.Row="3" FontWeight="Bold"></Label>
+                            <Label Content="----------------------------------------------------------------------------"  FontSize="12" HorizontalAlignment="Center" FontWeight="Bold" Grid.Row="4" ></Label>
+
+                            <Label Content="Bachelor of Computer Science (BSCS) 4 Year, 2015 " FontWeight="Bold" FontSize="16" Grid.Row="5" ></Label>
+                            <Label Content="UNIVERSITY OF SARGODHA, SARGODHA" FontSize="12" Grid.Row="6" ></Label>
+                            <Label Content="Passed by (65%)"  FontSize="12" Grid.Row="7" FontWeight="Bold" ></Label>
+                            <Label Content="----------------------------------------------------------------------------"  FontSize="12" HorizontalAlignment="Center" FontWeight="Bold" Grid.Row="8" ></Label>
+
+                            <Label Content="Intermediate (FSC), 2010 " FontWeight="Bold" FontSize="16" Grid.Row="9" ></Label>
+                            <Label Content="DAR-E-ARQAM COLLEGE, SARGODHA" FontSize="12" Grid.Row="10" ></Label>
+                            <Label Content="Passed with (Grade A) (75%)"  FontSize="12" Grid.Row="11" FontWeight="Bold" ></Label>
+                            <Label Content="----------------------------------------------------------------------------"  FontSize="12" HorizontalAlignment="Center" FontWeight="Bold" Grid.Row="12" ></Label>
+
+                            <Label Content="Matriculation, 2008" FontWeight="Bold" FontSize="16" Grid.Row="13" ></Label>
+                            <Label Content="ISLAMIC IDEAL SCHOOL FAROOKA, SARGODHA" FontSize="12" Grid.Row="14" ></Label>
+                            <Label Content="Passed with (Grade A+) (87%)"  FontSize="12" Grid.Row="15" FontWeight="Bold" ></Label>
+
+
+                        </Grid>
+                    </TabItem>
+                    <TabItem Name="tabHobbi" Visibility="Collapsed">
+                        <Grid Background="#FFE5E5E5">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="45"></RowDefinition>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition Height="30"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Label Content="Hobbies" Grid.Row="0" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold"/>
+                            <Label Content="Writing Diary " Grid.Row="1" />
+                            <Label Content="Books Reading " Grid.Row="2" />
+                            <Label Content="Recycling Unused Materials " Grid.Row="3" />
+                            <Label Content="Internet Browsing" Grid.Row="4" />
+
+                            
+                        </Grid>
+                    </TabItem>
+                    <TabItem Name="tabLang" Visibility="Collapsed">
+                        <Grid Background="#FFE5E5E5">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="45"></RowDefinition>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition Height="30"></RowDefinition>
+                               
+                            </Grid.RowDefinitions>
+                            <Label Content="Languages" Grid.Row="0" HorizontalAlignment="Center" FontSize="25" FontWeight="Bold"/>
+                            <Label Content="Proficient in reading, writing and Speaking English." Grid.Row="1" />
+                            <Label Content="Proficient in reading, writing and speaking Urdu and Punjabi." Grid.Row="2" />
+                            
+
+                        </Grid>
+                    </TabItem>
+                </TabControl>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>
